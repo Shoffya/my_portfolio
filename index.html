@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Updock&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="backg">
+        <div id="menu" class="fixed-top">
+            <ul>
+                <li class="list active">
+                    <a href="#homeFull">
+                        <span class="icon">
+                            <i class="bi bi-house"></i>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#skillsFull">
+                        <span class="icon">
+                            <i class="bi bi-list-check"></i>
+                        </span>
+                        <span class="title">Skills</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#projectsFull">
+                        <span class="icon">
+                            <i class="bi bi-journal-check"></i>
+                        </span>
+                        <span class="title">Projects</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#aboutFull">
+                        <span class="icon">
+                            <i class="bi bi-person-circle"></i>
+                        </span>
+                        <span class="title">About</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="bi bi-chat-right-dots"></i>
+                        </span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <!-- Home -->
+        <div id="homeFull" class="divPri">
+            <div class="home ">
+                <div class="text hidden1">
+                    <h1>Hi, I'm<span> Ingrid</span><br>Nice to meet you!</h1>
+                    <h6>I'm a <span>Web Designer</span></h6>
+                    <p>I'm creative and I always try to learn new things,<br>
+                        create new projects and practice some of my hobbies<br>
+                        in my free time.</p>
+
+                    <a class="btn_home" href="#aboutFull"><span>Find out more</span></a>
+                </div>
+            </div>
+            <div class="image">
+                <div class="imgProfile hidden3">
+                    <div class="profile">
+                        <img src="./img/perfil.png" alt="Profile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Skills -->
+        <div id="skillsFull" class="divPri">
+            <div class="contSkills">
+                <h2 class="hidden3"><i class="bi bi-stars"></i>Skills<i class="bi bi-stars"
+                        style="transform: scaleX(-1); display: inline-block;"></i></h2>
+                <div class="slider hidden1">
+                    <div class="listSkills">
+                        <div class="item" style="--position: 1">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Intermediate</h5>
+                                </div>
+                            </div>
+                            <img src="./img/html.png" alt="HTML">
+                        </div>
+                        <div class="item" style="--position: 2">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Intermediate</h5>
+                                </div>
+                            </div>
+                            <img src="./img/css.png" alt="CSS">
+                        </div>
+                        <div class="item" style="--position: 3">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Intermediate</h5>
+                                </div>
+                            </div>
+                            <img src="./img/javaScript.png" alt="JavaScript">
+                        </div>
+                        <div class="item" style="--position: 4">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Basic</h5>
+                                </div>
+                            </div>
+                            <img src="./img/react.png" alt="React">
+                        </div>
+                        <div class="item" style="--position: 5">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Basic</h5>
+                                </div>
+                            </div>
+                            <img src="./img/typescript.png" alt="TypeScript">
+                        </div>
+                        <div class="item" style="--position: 6">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Basic</h5>
+                                </div>
+                            </div>
+                            <img src="./img/csharp.png" alt="C#">
+                        </div>
+                        <div class="item" style="--position: 7">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Basic</h5>
+                                </div>
+                            </div>
+                            <img src="./img/angular.png" alt="Angular">
+                        </div>
+                        <div class="item" style="--position: 8">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Intermediate</h5>
+                                </div>
+                            </div>
+                            <img src="./img/bootstrap.png" alt="Bootstrap">
+                        </div>
+                        <div class="item" style="--position: 9">
+                            <div class="cardLevel">
+                                <div class="level">
+                                    <h5>Intermediate</h5>
+                                </div>
+                            </div>
+                            <img src="./img/swiper.png" alt="Swiper">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="background" src="./img/background.png" alt="">
+            <div class="circle"></div>
+        </div>
+        <!-- Projects -->
+        <div id="projectsFull" class="divPri">
+
+        </div>
+        <!-- About -->
+        <!-- <div id="aboutFull" class="divPri">
+            <div class="img_and_texts">
+                <div class="img hidden1">
+                    <img src="./img/hobbies.png" alt="Hobbies">
+                </div>
+                <div class="textAbout hidden3">
+                    <h2>Hobbies</h2>
+                    <p>
+                        In my free time I like to study and create new<br>
+                        projects, watch videos, series and films, listen<br>
+                        to music and sometimes draw.
+                    </p>
+                </div>
+            </div>
+            <div class="opts">
+                <ul>
+                    <li class="listAbout active" data-image="./img/hobbies.png">
+                        <img src="./img/hobbies.png" alt="Hobbies">
+                        Hobbies
+                    </li>
+                    <li class="listAbout" data-image="./img/career.png">
+                        <img src="./img/career.png" alt="Career">
+                        Career
+                    </li>
+                    <li class="listAbout" data-image="./img/qualification.png">
+                        <img src="./img/qualification.png" alt="Qualification">
+                        Qualification
+                    </li>
+                    <li class="listAbout" data-image="./img/future.png">
+                        <img src="./img/future.png" alt="Future">
+                        Future
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- Contact -->
+        <!-- <div id="contactFull" class="divPri">
+            <div class="btns">
+                <button class="email"><i class="bi bi-envelope"></i></button>
+                <button class="linkedin"><a href="https://www.linkedin.com/in/ingrid-fernandes-3a803a135/"
+                        target="_blank"><i class="bi bi-linkedin"></i></a></button>
+            </div>
+        </div> -->
+
+        <!-- Scroll up and Scroll down -->
+        <div id="scroll">
+            <a href="#contactFull">
+                <h4>|</h4>
+                <h5>scroll down</h5>
+                <span><i class="bi bi-mouse"></i></span>
+            </a>
+        </div>
+    </div>
+
+    <script src="./js/scrollMovement.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/movement.js"></script>
+    <script src="./js/buttonClick.js"></script>
+</body>
+
+</html>
