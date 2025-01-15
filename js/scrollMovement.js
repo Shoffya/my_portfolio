@@ -213,19 +213,16 @@ function textChange(deviceV) {
 
         const projectLists = document.querySelectorAll('#content #projectsFull ul .projectList');
 
-// Modifica a altura e o layout de todos os elementos .projectList
-projectLists.forEach(projectList => {
-    projectList.style.height = '700px';
-    projectList.style.flexDirection = 'column';  // Alterando para coluna, por exemplo
-});
+        projectLists.forEach(projectList => {
+            projectList.style.height = '700px';
+            projectList.style.flexDirection = 'column';
+        });
 
-// Seleciona todos os elementos .left e .right
-const leftItems = document.querySelectorAll('#content #projectsFull ul .projectList .left');
-const rightItems = document.querySelectorAll('#content #projectsFull ul .projectList .right');
+        const leftItems = document.querySelectorAll('#content #projectsFull ul .projectList .left');
+        const rightItems = document.querySelectorAll('#content #projectsFull ul .projectList .right');
 
-// Modifica a largura de todos os elementos .left e .right
-leftItems.forEach(item => item.style.width = '100%');
-rightItems.forEach(item => item.style.width = '100%');
+        leftItems.forEach(item => item.style.width = '90%');
+        rightItems.forEach(item => item.style.width = '90%');
     }
 }
 

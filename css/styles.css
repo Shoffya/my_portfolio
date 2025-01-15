@@ -1307,37 +1307,29 @@ body {
 /* Device Verification */
 
 @media (max-width: 1228px) {
-
+    
     /* Home */
     #content #homeFull {
         height: auto;
         flex-wrap: wrap;
         gap: 10px;
     }
-
+    
     #content #homeFull .home .text, 
     #content #homeFull .home .btn_home {
         width: 100%;
     }
-
+    
     /* Skills */
     #content #skillsFull .background {
         object-fit: cover;
         object-position: center;
     }
+}
 
-    /* Projects */
-    /* #content #projectsFull ul .projectList {
-        height: 600px;
-        flex-direction: column;
+@media (max-width: 530px) {
+    #backg #menu {
+        width: 90%;
+        margin: 7.5% 5%;
     }
-    
-    #content #projectsFull ul .projectList:nth-child(1) {
-        background: blue;
-    }
-
-    #content #projectsFull ul .projectList .left,
-    #content #projectsFull ul .projectList .right {
-        width: 100%;
-    } */
 }
