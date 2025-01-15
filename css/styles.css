@@ -528,6 +528,7 @@ body {
 
 #content #aboutFull .img_and_texts .img,
 #content #aboutFull .img_and_texts .textAbout {
+    width: 50%;
     height: 450px;
     display: flex;
     position: absolute;
@@ -537,10 +538,6 @@ body {
 }
 
 #content #aboutFull .img_and_texts .img {
-    width: 50%;
-    /* background: var(--clr-white-light); */
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
     overflow: hidden;
     transition: 0.5s;
     left: 0;
@@ -552,7 +549,6 @@ body {
 }
 
 #content #aboutFull .img_and_texts .textAbout {
-    width: 50%;
     right: 0;
 }
 
@@ -1326,6 +1322,38 @@ body {
     #content #homeFull .home .text, 
     #content #homeFull .home .btn_home {
         width: 100%;
+    }
+
+    /* About */
+    #content #aboutFull {
+        height: 110vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #content #aboutFull .img_and_texts {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    #content #aboutFull .img_and_texts .textAbout {
+        height: 200px;
+    }
+
+    #content #aboutFull .img_and_texts .img,
+    #content #aboutFull .img_and_texts .textAbout {
+        width: 100%;
+        position: relative;
+    }
+
+    #content #aboutFull .opts {
+        position: relative;
     }
 }
 

@@ -1,6 +1,5 @@
 function textChange(deviceV) {
     const projectsFull = document.querySelector("#projectsFull");
-    let device;
     const ul1 = `
         <h2>Projects</h2>
         <ul>
@@ -205,14 +204,12 @@ function textChange(deviceV) {
 
     if (deviceV == "desktop") {
         projectsFull.innerHTML = ul1;
-        device = [269, 940, 2986, 3520, 3595];
-        checkScrollY(device);
-    }
-    else if (deviceV == "mobile or tablet") {
+
+
+    } else if (deviceV == "mobile or tablet") {
         projectsFull.innerHTML = ul2;
 
         const projectLists = document.querySelectorAll('#content #projectsFull ul .projectList');
-
         projectLists.forEach(projectList => {
             projectList.style.height = '700px';
             projectList.style.flexDirection = 'column';
@@ -223,6 +220,12 @@ function textChange(deviceV) {
 
         leftItems.forEach(item => item.style.width = '90%');
         rightItems.forEach(item => item.style.width = '90%');
+
+        const left = document.querySelectorAll('#content #projectsFull ul .projectList .left');
+        const right = document.querySelectorAll('#content #projectsFull ul .projectList .right');
+        left.forEach(item => item.style.background = 'linear-gradient(to left, var(--clr-blue-dark), var(--clr-red), var(--clr-blue-dark))');
+        right.forEach(item => item.style.background = 'transparent');
+
     }
 }
 
@@ -232,7 +235,6 @@ function webSiteScroll(trueOrFalse) {
     const scrollAnimH4 = scroll.querySelector("#scroll.scrollAnim a h4");
     const scrollAnimH5 = scroll.querySelector("#scroll.scrollAnim a h5");
     const scrollAnimI = scroll.querySelector("#scroll.scrollAnim a span");
-
 
     if (trueOrFalse == true) {
         scroll.classList.remove("scrollAnim2");
@@ -250,11 +252,9 @@ function webSiteScroll(trueOrFalse) {
 
             scrollAnimH4.innerHTML = "That's all";
             scrollAnimH5.innerHTML = `<i class="bi bi-mouse"></i>`;
-            scrollAnimI.innerHTML = "- scroll up -"
-
+            scrollAnimI.innerHTML = "- scroll up -";
         }, 500);
-    }
-    else if (trueOrFalse == false) {
+    } else if (trueOrFalse == false) {
         scroll.classList.remove("scrollAnim");
         scroll.classList.add("scrollAnim2");
 
@@ -270,8 +270,7 @@ function webSiteScroll(trueOrFalse) {
 
             scrollAnimH4.innerHTML = "|";
             scrollAnimH5.innerHTML = `scroll down`;
-            scrollAnimI.innerHTML = `<i class="bi bi-mouse"></i>`
-
+            scrollAnimI.innerHTML = `<i class="bi bi-mouse"></i>`;
         }, 500);
     }
 }
@@ -308,19 +307,35 @@ function checkScrollY(n) {
     }
 }
 
-const teste = setInterval(() => {
-    console.log(window.scrollY)
-}, 50);
-
 function deviceVerification() {
     const userAgent = navigator.userAgent.toLowerCase();
+    let deviceType;
 
     if (/mobile|tablet|ip(ad|hone|od)|android/i.test(userAgent)) {
-        textChange("mobile or tablet");
+        deviceType = "mobile or tablet";
+    } else {
+        deviceType = "desktop";
     }
-    else {
-        textChange("desktop");
-    }
+
+    textChange(deviceType);
 }
 
 deviceVerification();
+
+window.addEventListener("scroll", () => {
+    let device;
+
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (/mobile|tablet|ip(ad|hone|od)|android/i.test(userAgent)) {
+        device = [857, 1528, 5076, 5942, 5981];
+    } else {
+        device = [269, 940, 2986, 3520, 3595];
+    }
+
+    checkScrollY(device);
+});
+
+
+// setInterval(window.addEventListener("scroll", () => {
+//     console.log(window.scrollY);
+// }), 1000);
