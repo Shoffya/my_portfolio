@@ -1315,6 +1315,11 @@ body {
         gap: 10px;
     }
 
+    #content #homeFull .home .text, 
+    #content #homeFull .home .btn_home {
+        width: 100%;
+    }
+
     /* Skills */
     #content #skillsFull .background {
         object-fit: cover;
