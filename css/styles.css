@@ -465,7 +465,7 @@ body {
     text-align: center;
 }
 
-#content #projectsFull ul .projectList .Programming_languages_used {
+#content #projectsFull ul .projectList .programming_languages_used {
     width: 400px;
     height: 50px;
     display: flex;
@@ -473,7 +473,7 @@ body {
     align-items: center;
 }
 
-#content #projectsFull ul .projectList .Programming_languages_used img {
+#content #projectsFull ul .projectList .programming_languages_used img {
     width: 50px;
     height: 50px;
     border-radius: 5px;
@@ -1306,7 +1306,7 @@ body {
 
 /* Device Verification */
 
-@media (max-width: 1000px) {
+@media (max-width: 1228px) {
 
     /* Home */
     #content #homeFull {
@@ -1322,7 +1322,7 @@ body {
     }
 
     /* Projects */
-    #content #projectsFull ul .projectList {
+    /* #content #projectsFull ul .projectList {
         height: 600px;
         flex-direction: column;
     }
@@ -1334,5 +1334,5 @@ body {
     #content #projectsFull ul .projectList .left,
     #content #projectsFull ul .projectList .right {
         width: 100%;
-    }
+    } */
 }
