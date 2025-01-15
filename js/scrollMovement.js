@@ -308,9 +308,9 @@ function checkScrollY(n) {
     }
 }
 
-// const teste = setInterval(() => {
-//     console.log(window.scrollY)
-// }, 50);
+const teste = setInterval(() => {
+    console.log(window.scrollY)
+}, 50);
 
 function deviceVerification() {
     const userAgent = navigator.userAgent.toLowerCase();

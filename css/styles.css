@@ -1308,22 +1308,24 @@ body {
 
 @media (max-width: 1228px) {
     
+    /* Skills */
+    #content #skillsFull .background {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media (max-width: 915px) {
     /* Home */
     #content #homeFull {
         height: auto;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 50px;
     }
     
     #content #homeFull .home .text, 
     #content #homeFull .home .btn_home {
         width: 100%;
-    }
-    
-    /* Skills */
-    #content #skillsFull .background {
-        object-fit: cover;
-        object-position: center;
     }
 }
 
