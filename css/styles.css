@@ -512,11 +512,31 @@ body {
     height: 100vh;
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin-top: 30px;
     color: var(--clr-white);
     margin-bottom: 30px;
 
+}
+
+#content #aboutFull .titleAbout {
+    width: 30%;
+    height: 60px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    border-top: 3px solid var(--clr-white);
+    border-bottom: 3px solid var(--clr-white);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(to left, var(--clr-blue-dark), var(--clr-red), var(--clr-blue-dark));
+    top: 120px;
 }
 
 #content #aboutFull .img_and_texts {
@@ -1303,7 +1323,7 @@ body {
 /* Device Verification */
 
 @media (max-width: 1228px) {
-    
+
     /* Skills */
     #content #skillsFull .background {
         object-fit: cover;
@@ -1312,14 +1332,15 @@ body {
 }
 
 @media (max-width: 915px) {
+
     /* Home */
     #content #homeFull {
         height: auto;
         flex-wrap: wrap;
         gap: 50px;
     }
-    
-    #content #homeFull .home .text, 
+
+    #content #homeFull .home .text,
     #content #homeFull .home .btn_home {
         width: 100%;
     }
@@ -1327,9 +1348,6 @@ body {
     /* About */
     #content #aboutFull {
         height: 110vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
 
     #content #aboutFull .img_and_texts {
