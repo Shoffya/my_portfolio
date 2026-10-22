@@ -144,10 +144,10 @@ body {
 
 #content #homeFull {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
+    position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
 #content #homeFull {
@@ -200,7 +200,7 @@ body {
 }
 
 #content #homeFull .home .text a {
-    background: var(--clr-red_dark);
+    margin-top: 30px;
     cursor: url('../img/cursor2.png'), pointer;
 }
 
@@ -319,20 +319,23 @@ body {
     width: 150px;
     height: 80px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 5px;
     background: var(--clr-red_dark);
+    overflow: hidden;
 }
 
 #content #skillsFull .contSkills .slider .listSkills .item .cardLevel .level h5 {
+    width: 100%;
+    height: 100%;
     font-family: "Nunito", sans-serif;
-    font-weight: bolder;
-    padding-left: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 3px;
     text-shadow: -2px 3px 2px var(--clr-blue-dark);
     color: var(--clr-white);
-    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #content #skillsFull .contSkills .slider .listSkills .item img {
@@ -399,7 +402,6 @@ body {
 
 #content #projectsFull ul .projectList {
     width: 100%;
-    height: 300px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -449,7 +451,7 @@ body {
 }
 
 #content #projectsFull ul .projectList h2 {
-    width: 300px;
+    width: 100%;
     font-family: "Nunito", sans-serif;
     font-weight: bold;
     text-align: center;
@@ -458,6 +460,7 @@ body {
     border: none;
     border-radius: none;
     background: none;
+    clip-path: none;
 }
 
 #content #projectsFull ul .projectList p {
@@ -465,28 +468,30 @@ body {
     text-align: center;
 }
 
-#content #projectsFull ul .projectList .programming_languages_used {
+#content #projectsFull ul .projectList .Programming_languages_used {
     width: 400px;
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 30px;
 }
 
-#content #projectsFull ul .projectList .programming_languages_used img {
+#content #projectsFull ul .projectList .Programming_languages_used img {
     width: 50px;
     height: 50px;
     border-radius: 5px;
 }
 
 #content #projectsFull ul .btn_more_projects {
-    width: 150px;
+    width: 180px;
     height: 50px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 11% 50%, 0% 0%);
+    border-radius: 5px;
+    overflow: hidden;
     transition: 0.5s;
 }
 
@@ -512,31 +517,11 @@ body {
     height: 100vh;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin-top: 30px;
     color: var(--clr-white);
     margin-bottom: 30px;
 
-}
-
-#content #aboutFull .titleAbout {
-    width: 30%;
-    height: 60px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Nunito", sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    border-top: 3px solid var(--clr-white);
-    border-bottom: 3px solid var(--clr-white);
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background: linear-gradient(to left, var(--clr-blue-dark), var(--clr-red), var(--clr-blue-dark));
-    top: 120px;
 }
 
 #content #aboutFull .img_and_texts {
@@ -548,7 +533,6 @@ body {
 
 #content #aboutFull .img_and_texts .img,
 #content #aboutFull .img_and_texts .textAbout {
-    width: 50%;
     height: 450px;
     display: flex;
     position: absolute;
@@ -558,6 +542,9 @@ body {
 }
 
 #content #aboutFull .img_and_texts .img {
+    width: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
     overflow: hidden;
     transition: 0.5s;
     left: 0;
@@ -569,6 +556,7 @@ body {
 }
 
 #content #aboutFull .img_and_texts .textAbout {
+    width: 50%;
     right: 0;
 }
 
@@ -583,7 +571,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
 }
 
 #content #aboutFull .opts ul {
@@ -652,8 +640,7 @@ body {
 }
 
 /* Scroll up and Scroll down */
-
-#content #scroll {
+#scroll {
     width: 50px;
     height: 200px;
     text-align: center;
@@ -664,21 +651,22 @@ body {
     bottom: 150px;
     right: 25px;
     z-index: 8;
+    transition: all 0.5s ease-in-out;
 }
 
-#content #scroll a {
+#scroll .tagA {
     text-decoration: none;
     color: var(--clr-white-light);
     transition: 0.5s;
 }
 
-#content #scroll h5 {
+#scroll h5 {
     writing-mode: vertical-lr;
     transform: rotate(360deg);
-    text-align: center;
+    transition: all 0.5s ease-in-out;
 }
 
-#content #scroll a span {
+#scroll a span {
     font-size: 20px;
     font-weight: bold;
 }
@@ -687,7 +675,7 @@ body {
 
 /* General */
 
-/* Animação para elementos com a classe hidden */
+/* Animação para elementos com a classe hidden e show */
 
 .hidden1,
 .hidden2,
@@ -1008,20 +996,6 @@ body {
 
 /* Skills */
 
-#content #skillsFull .contSkills .slider .listSkills .item .cardLevel .level::before {
-    content: '';
-    width: 93%;
-    height: 90%;
-    display: flex;
-    position: absolute;
-    border-radius: 5px;
-    border-top: 5px solid var(--clr-blue-dark);
-    border-bottom: 5px solid var(--clr-blue-dark);
-    border-left: 5px solid var(--clr-red);
-    border-right: 5px solid var(--clr-red);
-    z-index: 3;
-}
-
 @keyframes autoRun {
     from {
         left: 100%;
@@ -1165,12 +1139,12 @@ body {
 }
 
 #content #projectsFull ul .btn_more_projects:hover {
-    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
+    box-shadow: 0 0 20px var(--clr-red);
 }
 
 #content #projectsFull ul .btn_more_projects a:hover {
     color: var(--clr-white);
-    background: var(--clr-red);
+    background: linear-gradient(to right, var(--clr-blue-dark),var(--clr-red),var(--clr-blue-dark));
     border-radius: 5px;
 }
 
@@ -1182,7 +1156,7 @@ body {
     }
 
     50% {
-        left: -500px;
+        left: -100%;
     }
 
     100% {
@@ -1202,7 +1176,7 @@ body {
 }
 
 #content #aboutFull .img_and_texts .imgAnim {
-    animation: stickPush 1s ease;
+    animation: stickPush 2s ease;
 }
 
 /* Contact */
@@ -1215,23 +1189,61 @@ body {
 /* Scroll up and Scroll down */
 
 #scroll.scrollAnim {
-    animation: scrollAnimYes 3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#content #scroll a:hover {
+.scrollAnim {
+    width: 150px !important;
+    height: 130px !important;
+    bottom: 10px !important;
+    right: calc(50% - 70px) !important;
+}
+
+.scrollAnim .tagA h5 {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollAnim .tagA h4 {
+    content: "That's all";
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollAnim .tagA span {
+    content: "- scroll up -";
+}
+
+.scrollAnim2 {
+    width: 50px !important;
+    height: 200px !important;
+    bottom: 150px !important;
+    right: 15px !important;
+}
+
+.scrollAnim2 .tagA h5 {
+    writing-mode: vertical-lr;
+    transform: rotate(360deg);
+}
+
+.scrollAnim2 .tagA h4 {
+    content: "|";
+}
+
+.scrollAnim2 .tagA span {
+    content: "<i class='bi bi-mouse'></i>";
+}
+
+.scrollAnim2:hover {
     color: var(--clr-white);
-}
-
-#scroll.scrollAnim a h5 {
-    animation: scrollAnimYes2 3s ease;
-}
-
-#scroll.scrollAnim2 {
-    animation: scrollAnimNot 3s ease;
-}
-
-#scroll.scrollAnim2 a h5 {
-    animation: scrollAnimNot2 3s ease;
 }
 
 @keyframes scrollAnimYes {
@@ -1322,62 +1334,33 @@ body {
 
 /* Device Verification */
 
-@media (max-width: 1228px) {
+@media (max-width: 1000px) {
+
+    /* Home */
+    #content #homeFull {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
     /* Skills */
     #content #skillsFull .background {
         object-fit: cover;
         object-position: center;
     }
-}
 
-@media (max-width: 915px) {
-
-    /* Home */
-    #content #homeFull {
-        height: auto;
-        flex-wrap: wrap;
-        gap: 50px;
-    }
-
-    #content #homeFull .home .text,
-    #content #homeFull .home .btn_home {
-        width: 100%;
-    }
-
-    /* About */
-    #content #aboutFull {
-        height: 110vh;
-    }
-
-    #content #aboutFull .img_and_texts {
-        height: auto;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
+    /* Projects */
+    #content #projectsFull ul .projectList {
+        height: 600px;
         flex-direction: column;
-        margin-top: 0;
+    }
+    
+    #content #projectsFull ul .projectList:nth-child(2) .left{
+        background: blue;
     }
 
-    #content #aboutFull .img_and_texts .textAbout {
-        height: 200px;
-    }
-
-    #content #aboutFull .img_and_texts .img,
-    #content #aboutFull .img_and_texts .textAbout {
+    #content #projectsFull ul .projectList .left,
+    #content #projectsFull ul .projectList .right {
         width: 100%;
-        position: relative;
-    }
-
-    #content #aboutFull .opts {
-        position: relative;
-    }
-}
-
-@media (max-width: 530px) {
-    #backg #menu {
-        width: 90%;
-        margin: 7.5% 5%;
     }
 }

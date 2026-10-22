@@ -1,283 +1,14 @@
-function textChange(deviceV) {
-    const projectsFull = document.querySelector("#projectsFull");
-    const ul1 = `
-        <h2>Projects</h2>
-        <ul>
-            <li class="projectList" style="--number: '1'">
-                <div class="left hidden1">
-                    <h2>Music Player</h2>
-                    <p>I created this project with the aim of learning new things<br>
-                        and also for personal use, where initially I would include<br>
-                        songs that I like to listen to, but I changed some songs to<br>
-                        others that would not require copyright.<br><br>
-
-                        <span>Programming languages and frameworks used:</span>
-                    </p>
-                    <div class="programming_languages_used">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/javaScript.png" alt="JavaScript">
-                        <img src="./img/bootstrap.png" alt="Bootstrap">
-                    </div>
-                </div>
-                <div class="right hidden3">
-                    <div class="video">
-                        <video src="./video/musicPlayer.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-            </li>
-            <li class="projectList" style="--number: '2'">
-                <div class="left hidden3">
-                    <div class="video">
-                        <video src="./video/portfolio.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-                <div class="right hidden2">
-                    <h2>Portfolio</h2>
-                    <p>
-                        The "Portifólio" project was created to test my skills<br>
-                        with the Angular framework along with other programming<br>
-                        languages.<br><br>
-
-                        <span>Programming languages and frameworks used:</span>
-                    </p>
-
-                    <div class="programming_languages_used">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/javaScript.png" alt="JavaScript">
-                        <img src="./img/angular.png" alt="Angular">
-                    </div>
-                </div>
-            </li>
-            <li class="projectList" style="--number: '3'">
-                <div class="left hidden1">
-                    <h2>Coffee Cup</h2>
-                    <p>In this project I created a coffee cup made entirely in the<br>
-                        CSS style sheet language, from the cup itself to the smoke.<br><br>
-
-                        <span>Programming languages and frameworks used:</span>
-                    </p>
-
-                    <div class="programming_languages_used">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/javaScript.png" alt="JavaScript">
-                        <img src="./img/bootstrap.png" alt="Bootstrap">
-                    </div>
-                </div>
-                <div class="right hidden3">
-                    <div class="video">
-                        <video src="./video/coffeeCup.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-            </li>
-            <li class="projectList" style="--number: '4'">
-                <div class="left hidden3">
-                    <div class="video">
-                        <video src="./video/turPyunRI.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-                <div class="right hidden2">
-                    <h2>Video Background</h2>
-                    <p>This project consisted of creating a website for a fictional<br>
-                        gaming company, marking the first time I used a video as<br>
-                        a background.<br><br>
-
-                        <span>Programming languages and frameworks used:</span>
-                    </p>
-
-                    <div class="programming_languages_used">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/javaScript.png" alt="JavaScript">
-                        <img src="./img/bootstrap.png" alt="Bootstrap">
-                    </div>
-                </div>
-            </li>
-            <li class="btn_more_projects">
-                <a href="https://github.com/Shoffya?tab=repositories" target="_blank">More Projects</a>
-            </li>
-        </ul>
-        `;
-
-    const ul2 = `
-        <h2>Projects</h2>
-        <ul>
-            <li class="projectList" style="--number: '1'">
-                <div class="left hidden1">
-                    <h2>Music Player</h2>
-                    <p>I created this project with the aim of learning new things<br>
-                        and also for personal use, where initially I would include<br>
-                        songs that I like to listen to, but I changed some songs to<br>
-                        others that would not require copyright.<br><br>
-
-                        <span>Programming languages and frameworks used:</span>
-                    </p>
-                    <div class="programming_languages_used">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/javaScript.png" alt="JavaScript">
-                        <img src="./img/bootstrap.png" alt="Bootstrap">
-                    </div>
-                </div>
-                <div class="right hidden3">
-                    <div class="video">
-                        <video src="./video/musicPlayer.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-            </li>
-            <li class="projectList" style="--number: '2'">
-                <div class="left hidden3">
-                    <h2>Portfolio</h2>
-                    <p>
-                        The "Portifólio" project was created to test my skills<br>
-                        with the Angular framework along with other programming<br>
-                        languages.<br><br>
-
-                        <span>Programming languages and frameworks used:</span>
-                    </p>
-
-                    <div class="programming_languages_used">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/javaScript.png" alt="JavaScript">
-                        <img src="./img/angular.png" alt="Angular">
-                    </div>
-                </div>
-                <div class="right hidden2">
-                    <div class="video">
-                        <video src="./video/portfolio.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-            </li>
-            <li class="projectList" style="--number: '3'">
-                <div class="left hidden1">
-                    <h2>Coffee Cup</h2>
-                    <p>In this project I created a coffee cup made entirely in the<br>
-                        CSS style sheet language, from the cup itself to the smoke.<br><br>
-
-                        <span>Programming languages and frameworks used:</span>
-                    </p>
-
-                    <div class="programming_languages_used">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/javaScript.png" alt="JavaScript">
-                        <img src="./img/bootstrap.png" alt="Bootstrap">
-                    </div>
-                </div>
-                <div class="right hidden3">
-                    <div class="video">
-                        <video src="./video/coffeeCup.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-            </li>
-            <li class="projectList" style="--number: '4'">
-                <div class="left hidden3">
-                    <h2>Video Background</h2>
-                    <p>This project consisted of creating a website for a fictional<br>
-                        gaming company, marking the first time I used a video as<br>
-                        a background.<br><br>
-
-                        <span>Programming languages and frameworks used:</span>
-                    </p>
-
-                    <div class="programming_languages_used">
-                        <img src="./img/html.png" alt="HTML">
-                        <img src="./img/css.png" alt="CSS">
-                        <img src="./img/javaScript.png" alt="JavaScript">
-                        <img src="./img/bootstrap.png" alt="Bootstrap">
-                    </div>
-                </div>
-                <div class="right hidden2">
-                    <div class="video">
-                        <video src="./video/turPyunRI.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-            </li>
-            <li class="btn_more_projects">
-                <a href="https://github.com/Shoffya?tab=repositories" target="_blank">More Projects</a>
-            </li>
-        </ul>
-        `;
-
-    if (deviceV == "desktop") {
-        projectsFull.innerHTML = ul1;
-
-
-    } else if (deviceV == "mobile or tablet") {
-        projectsFull.innerHTML = ul2;
-
-        const projectLists = document.querySelectorAll('#content #projectsFull ul .projectList');
-        projectLists.forEach(projectList => {
-            projectList.style.height = '700px';
-            projectList.style.flexDirection = 'column';
-        });
-
-        const leftItems = document.querySelectorAll('#content #projectsFull ul .projectList .left');
-        const rightItems = document.querySelectorAll('#content #projectsFull ul .projectList .right');
-
-        leftItems.forEach(item => item.style.width = '90%');
-        rightItems.forEach(item => item.style.width = '90%');
-
-        const left = document.querySelectorAll('#content #projectsFull ul .projectList .left');
-        const right = document.querySelectorAll('#content #projectsFull ul .projectList .right');
-        left.forEach(item => item.style.background = 'linear-gradient(to left, var(--clr-blue-dark), var(--clr-red), var(--clr-blue-dark))');
-        right.forEach(item => item.style.background = 'transparent');
-
-    }
-}
-
-function webSiteScroll(trueOrFalse) {
-    const scroll = document.querySelector("#scroll");
-    const scrollAnimA = scroll.querySelector("#scroll a");
-    const scrollAnimH4 = scroll.querySelector("#scroll.scrollAnim a h4");
-    const scrollAnimH5 = scroll.querySelector("#scroll.scrollAnim a h5");
-    const scrollAnimI = scroll.querySelector("#scroll.scrollAnim a span");
-
-    if (trueOrFalse == true) {
-        scroll.classList.remove("scrollAnim2");
-        scroll.classList.add("scrollAnim");
-
-        scrollAnimA.setAttribute('href', '#homeFull');
-
-        setTimeout(() => {
-            scroll.style.width = "150px";
-            scroll.style.height = "120px";
-            scroll.style.bottom = "10px";
-            scroll.style.right = "calc(50% - 70px)";
-            scrollAnimH5.style.writingMode = "horizontal-tb";
-            scrollAnimH5.style.transform = "rotate(0deg)";
-
-            scrollAnimH4.innerHTML = "That's all";
-            scrollAnimH5.innerHTML = `<i class="bi bi-mouse"></i>`;
-            scrollAnimI.innerHTML = "- scroll up -";
-        }, 500);
-    } else if (trueOrFalse == false) {
-        scroll.classList.remove("scrollAnim");
-        scroll.classList.add("scrollAnim2");
-
-        scrollAnimA.setAttribute('href', '#contactFull');
-
-        setTimeout(() => {
-            scroll.style.width = "50px";
-            scroll.style.height = "200px";
-            scroll.style.bottom = "150px";
-            scroll.style.right = "15px";
-            scrollAnimH5.style.writingMode = "vertical-lr";
-            scrollAnimH5.style.transform = "rotate(360deg)";
-
-            scrollAnimH4.innerHTML = "|";
-            scrollAnimH5.innerHTML = `scroll down`;
-            scrollAnimI.innerHTML = `<i class="bi bi-mouse"></i>`;
-        }, 500);
+function deviceVerification() {
+    const width = content.getBoundingClientRect().width;
+    if (width <= 1231) {
+        textChange("mobile or tablet");
+    } else {
+        textChange("desktop");
     }
 }
 
 function checkScrollY(n) {
     const scrollList = document.querySelectorAll('.list');
-
     if (scrollList.length === 0) {
         console.warn("No element found with class '.list'.");
         return;
@@ -285,57 +16,84 @@ function checkScrollY(n) {
 
     let activeIndex = -1;
 
-    if (window.scrollY <= n[0]) {
-        activeIndex = 0;
-    } else if (window.scrollY <= n[1]) {
-        activeIndex = 1;
-    } else if (window.scrollY <= n[2]) {
-        activeIndex = 2;
-    } else if (window.scrollY <= n[3]) {
-        activeIndex = 3;
-    } else if (window.scrollY <= n[4]) {
-        activeIndex = 4;
-        webSiteScroll(false);
-    } else {
-        webSiteScroll(true);
+    for (let i = 0; i < n.length; i++) {
+        if (window.scrollY <= n[i]) {
+            activeIndex = i;
+            break;
+        }
     }
-
     if (activeIndex !== -1) {
         scrollList.forEach((item, index) => {
+            console.log("O activeIndex é: " + activeIndex)
             item.classList.toggle('active', index === activeIndex);
         });
     }
 }
 
-function deviceVerification() {
-    const userAgent = navigator.userAgent.toLowerCase();
-    let deviceType;
-
-    if (/mobile|tablet|ip(ad|hone|od)|android/i.test(userAgent)) {
-        deviceType = "mobile or tablet";
-    } else {
-        deviceType = "desktop";
+setInterval(deviceVerification,100);
+    const teste = setInterval(() => {
+        console.log(window.scrollY)
+    }, 50);
+    
+    window.addEventListener("scroll", function () {
+        clearTimeout(window.scrollTimeout); // Cancela qualquer timeout anterior
+        window.scrollTimeout = setTimeout(() => {
+            verificarScroll();
+        }, 100); // Pequeno delay para evitar execuções excessivas
+    });
+    
+    function verificarScroll() {
+        const scroll = document.querySelector("#scroll");
+        const scrollAnimA = document.querySelector(".tagA");
+        const scrollAnimH4 = document.querySelector("#scroll h4");
+        const scrollAnimH5 = document.querySelector("#scroll h5");
+        const scrollAnimI = document.querySelector("#scroll span");
+        const targetDiv = document.querySelector("#contactFull");
+    
+        if (!scroll || !scrollAnimA || !scrollAnimH4 || !scrollAnimH5 || !scrollAnimI || !targetDiv) {
+            console.warn("Algum elemento não foi encontrado.");
+            return;
+        }
+    
+        const rect = targetDiv.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+    
+        if (rect.bottom <= windowHeight) {
+            scroll.classList.remove("scrollAnim2");
+            scroll.classList.add("scrollAnim");
+            scrollAnimA.setAttribute("href", "#homeFull");
+            console.log("True");
+    
+            setTimeout(() => {
+                scrollAnimH4.innerHTML = "That's all";
+                scrollAnimH5.innerHTML = `<i class="bi bi-mouse"></i>`;
+                scrollAnimI.innerHTML = "- scroll up -";
+                console.log("Animação ativada");
+            }, 500);
+        } else {
+            scroll.classList.remove("scrollAnim");
+            scroll.classList.add("scrollAnim2");
+            scrollAnimA.setAttribute("href", "#contactFull");
+    
+            setTimeout(() => {
+                scrollAnimH4.innerHTML = "|";
+                scrollAnimH5.innerHTML = "scroll down";
+                scrollAnimI.innerHTML = `<i class="bi bi-mouse"></i>`;
+                console.log("Reverso da animação ativado");
+            }, 500);
+        }
     }
 
-    textChange(deviceType);
+function textChange(deviceV) {
+    const projectsFull = document.querySelector("#projectsFull");
+    let device = [];
+
+    if (deviceV == "desktop") {
+        //projectsFull.innerHTML = ul1;
+        device = [443, 940, 1325, 3386, 4129];
+        checkScrollY(device);
+    }
+    // else if (deviceV == "mobile or tablet") {
+    //     projectsFull.innerHTML = ul2;
+    // }
 }
-
-deviceVerification();
-
-window.addEventListener("scroll", () => {
-    let device;
-
-    const userAgent = navigator.userAgent.toLowerCase();
-    if (/mobile|tablet|ip(ad|hone|od)|android/i.test(userAgent)) {
-        device = [857, 1528, 5076, 5942, 5981];
-    } else {
-        device = [269, 940, 2986, 3520, 3595];
-    }
-
-    checkScrollY(device);
-});
-
-
-// setInterval(window.addEventListener("scroll", () => {
-//     console.log(window.scrollY);
-// }), 1000);
